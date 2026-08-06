@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Préstamos</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+
+    <div class="logo">
+
+        <i class="fa-solid fa-laptop"></i>
+
+        <div>
+
+            <h1>Sistema de Préstamos</h1>
+            <p>Control de equipos tecnológicos</p>
+
+        </div>
+
+    </div>
+
+    <div class="estadisticas">
+
+        <div class="card-estadistica azul">
+
+            <h2 id="totalPrestados">0</h2>
+            <span>Prestados</span>
+
+        </div>
+
+        <div class="card-estadistica verde">
+
+            <h2 id="totalDevueltos">0</h2>
+            <span>Devueltos</span>
+
+        </div>
+
+        <div class="card-estadistica morado">
+
+            <h2 id="totalRegistros">0</h2>
+            <span>Total</span>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<main>
+
+<section class="formulario">
+
+<h2>
+
+<i class="fa-solid fa-circle-plus"></i>
+
+Registrar Préstamo
+
+</h2>
+
+<form id="formPrestamo">
+
+<div class="grid">
+
+<div class="campo">
+
+<label>Nombre completo</label>
+
+<input
+type="text"
+id="nombre"
+required>
+
+</div>
+
+<div class="campo">
+
+<label>Documento</label>
+
+<input
+type="text"
+id="documento"
+required>
+
+</div>
+
+<div class="campo">
+
+<label>Teléfono</label>
+
+<input
+type="text"
+id="telefono"
+required>
+
+</div>
+
+<div class="campo">
+
+<label>Correo</label>
+
+<input
+type="email"
+id="correo">
+
+</div>
+
+<div class="campo">
+
+<label>Área</label>
+
+<input
+type="text"
+id="area">
+
+</div>
+
+<div class="campo">
+
+<label>Tipo de equipo</label>
+
+<select id="tipo">
+
+<option>Portátil</option>
+
+<option>PC</option>
+
+<option>Tablet</option>
+
+<option>Video Beam</option>
+
+<option>Mouse</option>
+
+<option>Teclado</option>
+
+<option>Cargador</option>
+
+<option>Otro</option>
+
+</select>
+
+</div>
+
+<div class="campo">
+
+<label>Código del equipo</label>
+
+<input
+type="text"
+id="codigo"
+required>
+
+</div>
+<div class="campo"><label>Fecha de entrega</label><input type="date" id="fechaEntrega" required></div><div class="campo"><label>Fecha de devolución</label><input type="date" id="fechaDevolucion"></div>
+
+<div class="campo">
+
+<label>Estado</label>
+
+<select id="estado">
+
+<option value="Prestado">
+Prestado
+</option>
+
+<option value="Devuelto">
+Devuelto
+</option>
+
+</select>
+
+</div>
+
+</div>
+
+<div class="campo">
+
+<label>Observaciones</label>
+
+<textarea
+id="observaciones"
+rows="4"></textarea>
+
+</div>
+
+<div class="botones">
+
+<button
+type="submit"
+class="guardar">
+
+<i class="fa-solid fa-floppy-disk"></i>
+
+Guardar
+
+</button>
+
+<button
+type="reset"
+class="limpiar">
+
+<i class="fa-solid fa-broom"></i>
+
+Limpiar
+
+</button>
+
+</div>
+
+</form>
+
+</section>
+
+
+
+<section class="tabla">
+
+<div class="barra">
+
+<h2>
+
+<i class="fa-solid fa-table"></i>
+
+Registros
+
+</h2>
+
+<input
+type="search"
+id="buscar"
+placeholder="Buscar...">
+
+</div>
+
+<div class="tabla-responsive">
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Nombre</th>
+
+<th>Documento</th>
+
+<th>Equipo</th>
+
+<th>Código</th>
+
+<th>Estado</th>
+
+<th>Fecha</th>
+
+<th>Acciones</th>
+
+</tr>
+
+</thead>
+
+<tbody id="tablaPrestamos">
+
+</tbody>
+
+</table>
+
+</div>
+
+</section>
+
+</main>
+
+<footer>
+
+Sistema de Préstamos Juan Vides © 2026
+
+</footer>
+
+<script src="codigo.js"></script>
+
+</body>
+</html>
